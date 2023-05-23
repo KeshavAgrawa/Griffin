@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text to Speech</title>
+  </head>
+  <body>
+    <input type="text" id="input-text" />
+    <button onclick="speak()">Speak</button>
+
+    <script>
+      const synth = window.speechSynthesis;
+      const inputTxt = document.querySelector("#input-text");
+
+      function speak() {
+        if (synth.speaking) {
+          console.error("speechSynthesis.speaking");
+          return;
+        }
+
+        if (inputTxt.value !== "") {
+          const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+          utterThis.voiceURI = "Google हिन्दी";
+          utterThis.lang = "hi-IN";
+          utterThis.pitch = 1;
+          utterThis.rate = 0.9;
+          synth.speak(utterThis);
+        }
+      }
+    </script>
+  </body>
+</html>

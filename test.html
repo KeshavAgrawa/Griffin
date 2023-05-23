@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Topic Modeling Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/tmjs@0.4.1/dist/tm.js"></script>
+  </head>
+  <body>
+    <h1>Topic Modeling Example</h1>
+    <p>Enter Text:</p>
+    <textarea id="input" rows="5" cols="50">This is the text that we want to perform topic modeling on.</textarea>
+    <button id="btn">Perform Topic Modeling</button>
+    <div id="output"></div>
+    <script>
+      const input = document.querySelector('#input');
+      const btn = document.querySelector('#btn');
+      const output = document.querySelector('#output');
+      btn.addEventListener('click', performTopicModeling);
+
+      function performTopicModeling() {
+        const text = input.value;
+        const tokenizer = new natural.WordTokenizer();
+        const tokens = tokenizer.tokenize(text);
+        const corpus = new tm.Corpus([]);
+        corpus.addDoc(tokens.join(' '));
+        const model = new tm.LDA();
+        model.setCorpus(corpus);
+        model.train();
+        const topics = model.getTopics();
+        output.innerHTML = '';
+        for (let i = 0; i < topics.length; i++) {
+          const topic = topics[i];
+          const div = document.createElement('div');
+          const words = topic.getWords().map(w => `<span>${w.word}</span>`).join(', ');
+          div.innerHTML = `<h3>Topic ${i + 1}</h3><p>${words}</p>`;
+          output.appendChild(div);
+        }
+      }
+    </script>
+  </body>
+</html>

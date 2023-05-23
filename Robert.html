@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Vendor CSS Files -->
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!--Js file-->
+  
+   <!-- Template Main CSS File -->
+ <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/robert.css" rel="stylesheet">
+</head>
+<body style="background-color: black;">
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><b>Phoenix</b></a>
+        </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+         </nav><!-- .navbar -->
+    </div>
+    
+  </header><!-- End Header -->
+  <div class="robert">
+    <h1 class="text">Robert</h1>
+     <div class="every">
+        <div class="inner">
+             <p id="chatLog">Robert <br><hr></p>
+             
+        </div>
+      
+        <div class="insertingDiv">
+           <input type="text" class="search-box" id="input" placeholder="New Message" onkeydown="if(event.keyCode == 13) {talk()}"> <button class="send" id="band" onclick="talk()">Send <i class="fas fa-paper-plane"></i></button>
+         </div>
+     </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/compromise"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

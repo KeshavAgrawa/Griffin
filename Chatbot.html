@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+       
+       .box{
+        display: none;
+         position: absolute;top:50;
+         left: 50%;
+       
+       } div {
+          background-color: white;
+           width: 250px;
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           border-radius: 8px;
+           overflow-x: hidden;
+           overflow-y: visible;
+           height: 210px;
+           padding: 50px;
+           margin: 20px;
+       } body {
+          background-image: url("assets/img/hero-bg.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        } p1 {
+          font-size: 1.5em;
+        } p2 {
+          font-size: 1.5em;
+        } p3 {
+          font-size: 1.5em;
+        } .button {
+  display: inline-block;
+  border-radius: 16px;
+  background-color: #555;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 16px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+ 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+ 
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+ 
+.button:hover span {
+  padding-right: 25px;
+}
+ 
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} input {
+  border: none;
+  border-bottom: solid 2px red;
+  transition: width 0.4s ease-in-out;
+  border-radius: 4px;
+} input:focus {
+  border: none;
+  background-color: lightblue;
+  width: 100%;
+} .pop-up {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+} .btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+   
+ 
+ 
+</style>
+ 
+<script>
+  function hover() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+ 
+   </head>
+<body>
+<br>
+<h1> &nbsp; What is Chatbot </h1>
+<p1>&nbsp; &nbsp; &nbsp;A Chatbot is program or application that has a bot or coding which<br>talks to you as perscribed by the owner</p1>
+<p2><br><br><b>Is it complete?</b><br>No, The chatbot is still under development</p2>
+<p3><b><br><br>Rules And Regulations</b><br>There are no such rules or regulation but <br><b>* do not use special characters</b><br><b>* Do not use capitalized words even in the starting of the sentence</b><br><b>* do not give spaces in the end of the sentence</b></p3>
+ 
+ 
+ 
+<!--<button onclick="hover()" class="button" style="vertical-align:middle"><span> Chat </span>
+</button>-->
+ <a href="Robert.html" id="fat">
+  <button class="button" style="vertical-align:middle"><span> Chat </span>
+  </button>
+ </a>
+ 
+
+</body>
+</html>
+
